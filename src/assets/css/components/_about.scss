@@ -1,0 +1,48 @@
+#about {
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 10rem;
+      height: auto;
+      border: 2px solid $lt-gray;
+      border-radius: 50%;
+    }
+  
+    p {
+      margin: 2rem 0;
+  
+      &.title-fade-out {
+        opacity: 0;
+        animation-name: fade-out;
+        animation-duration: 3s;
+      }
+      &.title-fade-in {
+        opacity: 1;
+        animation-name: fade-in;
+        animation-duration: 3s;
+      }
+    }
+  }
+
+  #professional {
+    p {
+      margin: 1.5rem 0;
+    }
+  }
+
+  #personal {
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0 0 0 1rem;
+
+      li {
+        margin: .5rem 0;
+      }
+    }
+  }
+}

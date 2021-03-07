@@ -1,0 +1,192 @@
+@import "/assets/css/global/_fonts";
+@import "/assets/css/global/_mixins-functions";
+@import "/assets/css/global/_variables";
+@import "/assets/css/global/_animations";
+
+@import "/assets/css/components/_header";
+@import "/assets/css/components/_footer";
+@import "/assets/css/components/_about";
+@import "/assets/css/components/_projects";
+@import "/assets/css/components/_resume";
+@import "/assets/css/components/_references";
+@import "/assets/css/components/_social-links";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-font-size;
+
+  @include xs-mobile {
+    font-size: 9px;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  cursor: default;
+  margin: 0;
+  padding: 0 0 5rem;
+  max-width: 100%;
+  font: normal 1.6rem $roboto;
+  letter-spacing: .2rem;
+  color: $white;
+  background: $drk-black;
+  min-width: 320px;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+hr { 
+  margin: 2.5rem auto 0;
+  width: 75%;
+  border: 1px solid $lt-blue;
+  border-radius: 1px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, button, a, a:link, a:visited, a:hover, a:active, a:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: $economica;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.6rem;
+  text-decoration: underline;
+}
+
+button {
+  font: normal 1.6rem $roboto;
+  margin: 3rem 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-left: 3px solid $drk-orange;
+  border-bottom: 3px solid $drk-orange;
+  text-shadow: -2px 2px 4px $drk-black;
+
+  &:hover {
+    border-left: 3px solid $blue;
+    border-bottom: 3px solid $blue;
+  }
+
+  &:active {
+    transform: translate(-2px, 3px);
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+a.link, a.link:link, a.link:visited, a.link:hover, a.link:active {
+  text-decoration: underline;
+  color: $lt-orange;
+  outline: none;
+}
+
+.btn-link {
+  padding: 1rem;
+  border-radius: 5px;
+  background: $drk-black;
+  color: $drk-orange;
+
+  &:hover {
+    background: $lt-orange;
+    color: $white;
+  }
+
+  &.orange {
+    background: $lt-orange;
+    color: $white;
+
+    &:hover {
+      background: $lt-blue;
+    }
+  }
+}
+
+.box {
+  padding: 2rem 2rem 4rem;
+  background: rgba(0,0,0, .4);
+  border-radius: 5px;
+  box-shadow: -9px 8px 11px -4px $black;
+}
+
+.container {
+  max-width: 128rem; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  padding: 2rem 2rem 4rem;
+  width: 100%;
+}
+
+.pdf-download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 50%;
+    background: $lt-orange;
+    border: 1px solid $drk-orange;
+    width: 6.5rem;
+    height: 6.5rem;
+    box-shadow: 0 0 22px 0 $drk-orange;
+    
+    svg {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+// webkit scrollbar styles
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $lt-gray;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: $drk-orange;
+  border-radius: 5px;
+}

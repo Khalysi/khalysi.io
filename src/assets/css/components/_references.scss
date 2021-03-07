@@ -1,0 +1,49 @@
+#references {
+  .box {
+    margin-bottom: 3rem;
+    padding: 2rem 2rem 4rem;
+
+    img {
+      height: 7.5rem;
+      width: auto;
+    }
+
+    p {
+      margin: 1rem 0 2rem;
+
+      &.signature {
+        span {
+          display: block;
+
+          &:first-child {
+            margin-bottom: 1rem;
+          }
+
+          &:not(:first-child) {
+            font-size: 1.4rem;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5rem 0 0;
+
+      @include mobile-down {
+        flex-direction: column;
+      }
+  
+      a {
+        margin: 0 1rem;
+
+        @include mobile-down {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

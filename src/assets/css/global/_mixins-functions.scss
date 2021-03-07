@@ -1,0 +1,52 @@
+/* Utilities */
+@mixin prefixr($property, $value, $prefixes: (webkit, moz, ms, o) ) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+  @if($property==display and $value==flex){
+    @each $prefix in $prefixes {
+      #{$property}: -#{$prefix}-#{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+// Use this when the value also has to be prefixed.
+@mixin value-prefixr($property, $value, $prefixes: (webkit, moz, ms, o) ) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: -#{$prefix}-#{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+/* Media Queries */
+@mixin lg-desktop {
+  @media only screen and (min-width: #{$lg-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin md-desktop-down {
+  @media only screen and (max-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin mobile-down {
+  @media only screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin sm-mobile-down {
+  @media only screen and (max-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin xs-mobile {
+  @media only screen and (max-width: #{$xs-width}) {
+    @content;
+  }
+}

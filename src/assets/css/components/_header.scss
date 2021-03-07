@@ -1,0 +1,76 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 2rem;
+
+  > a {
+    padding: 1rem 1rem 2rem;
+    background: $lt-blue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    .title {
+      font-family: $economica;
+      font-size: 3.4rem;
+      font-weight: bold;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+
+    > ul {
+      display: flex;
+
+      &#mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        flex-direction: column;
+        padding: 2rem 0;
+        background: $lt-blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 0px 15px 12px black;
+
+        li {
+          margin: 0 0.5rem 1rem;
+        }
+      }
+
+      li {
+        display: flex;
+        justify-content: center;
+        margin: 2rem .5rem 1rem;
+        cursor: pointer;
+        
+        a {
+          padding: 1rem;
+          border-radius: 3px;
+
+          &.active, &:hover {
+            background: $lt-orange;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    > div {
+      top: 1.5rem;
+      z-index: 2;
+    }
+  }
+}

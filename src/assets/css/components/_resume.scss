@@ -1,0 +1,79 @@
+#resume {
+  h1 {
+    margin-bottom: 0;
+  }
+ 
+  > div {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm-mobile-down {
+      flex-direction: column;
+    }
+
+    h2 {
+      margin: 4rem 0 2rem;
+    }
+  }
+
+  .left {
+    width: 65%;
+  }
+  .right {
+    width: 30%;
+  }
+
+  .left, .right {
+    @include sm-mobile-down {
+      width: 100%;
+    }
+  }
+
+  .dates {
+    font-size: 1.2rem;
+  }
+
+  .experience {
+    margin-bottom: 2rem;
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 0 0 0 1rem;
+    }
+  }
+
+  .experience, .education {
+    .dates {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skills {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin: .25rem 5px;
+
+        &:not(:last-child) {
+          &::after {
+            content: ',';
+          }
+        }
+      }
+    }
+  }
+
+  .honors-awards {
+    p {
+      margin: 1rem 0;
+
+      .title {
+        display: block;
+      }
+    }
+    
+  }
+}
