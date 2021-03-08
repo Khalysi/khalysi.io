@@ -13,7 +13,7 @@ class Nav extends Component {
 
   displayMobileIcon = () => {
     return (
-      <HamburgerMenu
+      <HamburgerMenu className="mobile-nav-icon"
         isOpen={this.state.open}
         menuClicked={this.handleClick.bind(this)}
         width={18}
@@ -53,7 +53,7 @@ class Nav extends Component {
     return (
       <nav>
         {this.state.open ?  this.displayMobileNav() : null}
-        {window.innerWidth > 1200 ? this.displayNav() : this.displayMobileIcon()}
+        {window.innerWidth > 768 ? this.displayNav() : this.displayMobileIcon()}
       </nav>  
     );
   }
