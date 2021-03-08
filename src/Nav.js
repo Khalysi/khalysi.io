@@ -3,9 +3,13 @@ import { NavLink } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 
 class Nav extends Component {
-  state = {
-    open: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false
+    };
+  }
 
   handleClick = () => {
     this.setState({open: !this.state.open});

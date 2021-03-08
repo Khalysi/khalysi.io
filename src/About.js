@@ -10,11 +10,15 @@ const DESCRIPTIONS = [
 ];
 
 class About extends Component {
-  state = {
-    descriptionIndex: 0, 
-    fadeIn: true,
-    displayPersonal: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      descriptionIndex: 0, 
+      fadeIn: true,
+      displayPersonal: false
+    };
+  }
 
   componentDidMount() {
     this.timeout = setTimeout(() => this.setState({fadeIn: false}), 2000);
