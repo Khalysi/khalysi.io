@@ -10,8 +10,8 @@ const DESCRIPTIONS = [
 ];
 
 class About extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       descriptionIndex: 0, 
