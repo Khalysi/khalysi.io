@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 
 class Nav extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       open: false
