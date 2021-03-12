@@ -1,5 +1,7 @@
 import ael from '../assets/imgs/projects/ael.png';
 import kheslc from '../assets/imgs/projects/kheslc.png';
+import principal from '../assets/imgs/projects/principal.png';
+import mclane from '../assets/imgs/projects/mclane.png';
 import enthuse from '../assets/imgs/projects/enthuse.png';
 import nyl from '../assets/imgs/projects/nyl.png';
 import simply7 from '../assets/imgs/projects/simply7.png';
@@ -26,6 +28,18 @@ const PROJECTS = [
 		link: 'https://www.kheslc.com/kheslcservicing/pages/home.faces',
 		image: kheslc
   },
+  {
+		title: 'Principal ETFs',
+		description: 'Front End lead development and custom templating',
+		link: 'https://principaletfs.com/',
+		image: principal
+	},
+  {
+		title: 'Mclane',
+		description: 'Front End lead development and custom templating',
+		link: 'https://www.mclanehungersolutions.com/',
+		image: mclane
+	},
 	{
 		title: 'Enthuse',
 		description: 'Front End lead development and custom templating',
