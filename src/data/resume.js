@@ -29,7 +29,7 @@ export const EXPERIENCES = [
       'QA and unit testing on code and functionality',
       'Building sites with multi-browser support',
       'Created responsive pages to work with common phone, tablet, laptop, and computer sizes',
-      'Collaborated with design team and project managers closely to meetprovide all necessary functionality for clients'
+      'Collaborated with design team and project managers closely to meet and provide all necessary functionality for clients'
     ]
   },
   {
